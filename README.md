@@ -37,6 +37,9 @@ try {
 
 // With Joi:
 Joi.string().custom(assertISODate);
+
+// NOTE: Do not use together with Joi's .isoDate(). That will always
+// produce an ISO string, but one where the timezone has been transformed.
 ```
 
 ## License

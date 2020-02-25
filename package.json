@@ -1,6 +1,6 @@
 {
   "name": "@elunic/is-iso-date",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple utilities to check for ISO date compliance.",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -39,6 +39,8 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@elunic/ecs": "^0.2.3",
+    "@hapi/joi": "^17.1.0",
+    "@types/hapi__joi": "^16.0.12",
     "@types/jasmine": "^3.3.7",
     "@types/jasmine-expect": "^3.8.1",
     "@types/node": "^10.12.19",
