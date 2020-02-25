@@ -9,8 +9,10 @@ export function isISODate(str: string): boolean {
   return isoDateRegExp.test(str);
 }
 
-export function assertISODate(str: string): void {
+export function assertISODate(str: string): string {
   if (!isISODate(str)) {
     throw new InvalidISODateError(`Invalid ISO date: ${str}`);
   }
+
+  return str;
 }
