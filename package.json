@@ -1,0 +1,64 @@
+{
+  "name": "@elunic/is-iso-date",
+  "version": "1.0.0",
+  "description": "Simple utilities to check for ISO date compliance.",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "npm run clean && tsc-watch --onSuccess \"jasmine --config=.jasmine.json\" --preserveWatchOutput -w --noEmitOnError false",
+    "test:once": "npm run clean && npm run compile && jasmine --config=.jasmine.json && npm run check",
+    "compile": "tsc -p .",
+    "compile:prod": "tsc -p tsconfig.prod.json",
+    "clean": "rm -rf dist/",
+    "check": "tslint -p . -c tslint.fix.json && prettier --check '{src,test}/**/*.{ts,js}'",
+    "fix": "tslint --fix -p . -c tslint.fix.json && prettier --write '{src,test}/**/*.{ts,js}'",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elunic/node-is-iso-date.git"
+  },
+  "keywords": [
+    "isodate",
+    "iso8601",
+    "iso-date",
+    "elunic"
+  ],
+  "author": {
+    "name": "William Hefter",
+    "email": "wh@elunic.com"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@elunic/ecs": "^0.2.3",
+    "@types/jasmine": "^3.3.7",
+    "@types/jasmine-expect": "^3.8.1",
+    "@types/node": "^10.12.19",
+    "@types/prettier": "^1.19.0",
+    "@types/sinon": "^7.0.5",
+    "@types/source-map-support": "^0.5.1",
+    "@types/triple-beam": "^1.3.0",
+    "husky": "^1.3.1",
+    "jasmine": "^3.3.1",
+    "jasmine-expect": "^4.0.3",
+    "jasmine-spec-reporter": "^4.2.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.19.1",
+    "sinon": "^7.5.0",
+    "source-map-support": "^0.5.12",
+    "tsc-watch": "^1.1.34",
+    "tslint": "^6.0.0",
+    "typescript": "~3.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
