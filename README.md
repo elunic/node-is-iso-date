@@ -6,19 +6,10 @@ Written in TypeScript!
 
 ## Table of Contents
 
-- [`@elunic/logger`](#eluniclogger)
+- [`@elunic/is-iso-date`](#elunicis-iso-date)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Functionality](#functionality)
-  - [Usage](#usage)
-    - [JSON logging](#json-logging)
-    - [Important notes on duplicate logger instances](#important-notes-on-duplicate-logger-instances)
-    - [Child namespaces](#child-namespaces)
-    - [`awilix` service function factory](#awilix-service-function-factory)
-    - [`bottlejs` service function factory](#bottlejs-service-function-factory)
-    - [AWS CloudWatch](#aws-cloudwatch)
-  - [Mock usage](#mock-usage)
-    - [`bottlejs`/`awilix` example](#bottlejsawilix-example)
   - [License](#license)
 
 
@@ -31,7 +22,7 @@ $ npm install @elunic/is-iso-date
 
 ## Functionality
 
-````typescript
+```typescript
 
 import { isoDateRegExp, isISODate, InvalidISODateError, assertISODate } from '@elunic/is-iso-date';
 
@@ -46,7 +37,6 @@ try {
 
 // With Joi:
 Joi.string().custom(assertISODate);
-
 ```
 
 ## License
