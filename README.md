@@ -10,8 +10,8 @@ Written in TypeScript!
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Functionality](#functionality)
+    - [`class-validator` decorator](#class-validator-decorator)
   - [License](#license)
-
 
 ## Installation
 
@@ -19,11 +19,9 @@ Written in TypeScript!
 $ npm install @elunic/is-iso-date
 ```
 
-
 ## Functionality
 
 ```typescript
-
 import { isoDateRegExp, isISODate, InvalidISODateError, assertISODate } from '@elunic/is-iso-date';
 
 '2020-02-20T10:00:00Z'.match(isoDateRegExp); // OK
@@ -40,6 +38,21 @@ Joi.string().custom(assertISODate);
 
 // NOTE: Do not use together with Joi's .isoDate(). That will always
 // produce an ISO string, but one where the timezone has been transformed.
+```
+
+### `class-validator` decorator
+
+This module provides the `@IsStrictISO8601()` decorator for use with the `class-validator` module.
+
+**Note** that you will have to provide the `class-validator` in `peerDependencies`.
+
+```typescript
+import { IsStrictISO8601 } from '@elunic/is-iso-date/class-validator';
+
+export class TodoEntity {
+  @IsStrictISO8601()
+  dueDate: string;
+}
 ```
 
 ## License

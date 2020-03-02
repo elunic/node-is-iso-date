@@ -1,6 +1,6 @@
 import * as Joi from '@hapi/joi';
 
-import { assertISODate } from '.';
+import { assertISODate } from '..';
 
 describe('assertISODate', () => {
   describe('with @hapi/joi', () => {
