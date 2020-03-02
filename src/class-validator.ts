@@ -4,7 +4,7 @@
 import { registerDecorator, ValidationArguments } from 'class-validator';
 import { isISO8601 } from 'validator';
 
-import { isISODate } from '../..';
+import { isISODate } from './is-iso-date';
 
 export function IsStrictISO8601() {
   return (object: {}, propertyName: string) => {

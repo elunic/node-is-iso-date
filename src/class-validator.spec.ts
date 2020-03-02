@@ -1,6 +1,6 @@
 import { validate } from 'class-validator';
 
-import { IsStrictISO8601 } from '.';
+import { IsStrictISO8601 } from './class-validator';
 
 class TestClass1 {
   @IsStrictISO8601()
