@@ -1,6 +1,6 @@
 {
   "name": "@elunic/is-iso-date",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple utilities to check for ISO date compliance.",
   "main": "index.js",
   "typings": "index.d.ts",
