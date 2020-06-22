@@ -1,8 +1,7 @@
 // tslint:disable:no-any
 // tslint:disable:no-unused-vars
 
-import { registerDecorator, ValidationArguments } from 'class-validator';
-import { isISO8601 } from 'validator';
+import { isISO8601, registerDecorator, ValidationArguments } from 'class-validator';
 
 import { isISODate } from './is-iso-date';
 
