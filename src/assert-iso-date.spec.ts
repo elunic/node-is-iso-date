@@ -1,9 +1,9 @@
-import * as Joi from '@hapi/joi';
+import * as Joi from 'joi';
 
 import { assertISODate } from '.';
 
 describe('assertISODate', () => {
-  describe('with @hapi/joi', () => {
+  describe('with joi', () => {
     it('should fail schema validation for invalid date', async () => {
       const schema = Joi.string()
         .custom(assertISODate)
